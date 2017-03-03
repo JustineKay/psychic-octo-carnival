@@ -27,3 +27,8 @@ print restaurants_json
 first_restaurant = Restaurant(restaurants_json[0])
 print first_restaurant.name
 
+"""
+This method should return a string indicating the restaurant name to go to
+"""
+def get_lunch_response():
+  return first_restaurant.name
