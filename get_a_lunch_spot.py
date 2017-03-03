@@ -3,23 +3,11 @@ import json
 restaurants_string = """[{
   "name" : "sweetgreen"
 }]"""
-print restaurants_string
-
-restaurants_json = json.loads(restaurants_string)
-print restaurants_json
 
 class Restaurant:
   name = ""
-
   def __init__(self, data):
-    self.name = self.getName(data)
-
-  def getName(self, data):
-    for i in data:
-      return i['name']
-
-restaurant_response = Restaurant(restaurants_json)
-print restaurant_response.name
+    self.name = data['name']
 
 
 class GetALunchSpotResponse:
@@ -30,3 +18,12 @@ class GetALunchSpotResponse:
 
   def generateStringResponse():
     return "Why don't you go to: " + restaurant.name
+
+
+print restaurants_string
+restaurants_json = json.loads(restaurants_string)
+print restaurants_json
+
+first_restaurant = Restaurant(restaurants_json[0])
+print first_restaurant.name
+
