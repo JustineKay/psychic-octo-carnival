@@ -1,0 +1,29 @@
+{
+  "session": {
+    "sessionId": "SessionId.8dd0b82b-f2f2-4529-9263-e95aa2ce9f51",
+    "application": {
+      "applicationId": "amzn1.ask.skill.8e90a2d0-575f-4c2a-85f4-147ef0fb5b29"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AGIAH4TZ4OYPGJS7VEPUSYDTTXJ7E3Q56FT4R6UTTUWXLQJYTBEFFYCSMC6K4FQXQBPQ5EBQR6PQCCRJOGWPWI5NUUUU5F7FFWQDYBA3QSGDJLHRZCIMZ2NWNKY6Q27XCV2XIMCHPSMUNUNK4S7STB4IBP2CKVGDYALMXOHHFW7B4MNDQWGOPLBLDAXAGOP5ZNRSVWMH6MITNDY"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.094f3753-b6be-458e-a2d1-b90f5f29e03d",
+    "locale": "en-US",
+    "timestamp": "2017-03-17T19:38:07Z",
+    "intent": {
+      "name": "GetLunchSpotIntent",
+      "slots": {
+        "Person": {
+          "name": "Person",
+          "value": "David Justine"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

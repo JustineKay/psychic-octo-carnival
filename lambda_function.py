@@ -5,7 +5,8 @@ Happy Hacking!
 """
 
 from ask import alexa
-from get_a_lunch_spot import get_lunch_response
+from get_a_lunch_spot import GetALunchSpotResponse
+from speech_diversifier import SpeechDiversifier
 
 def lambda_handler(request_obj, context=None):
     '''
@@ -39,8 +40,10 @@ def session_ended_request_handler(request):
 
 @alexa.intent_handler("GetLunchSpotIntent")
 def get_lunch_response_intent_handler(request):
-    restaurant_name = get_lunch_response()
-    return alexa.create_response(message="How about {}".format(restaurant_name))
+    lunchspot = GetALunchSpotResponse(request)
+    sd = SpeechDiversifier()
+    response = sd.diversify_suggestion(lunchspot.find_restaurant().name)
+    return alexa.create_response(message=response)
 
 @alexa.intent_handler('GetRecipeIntent')
 def get_recipe_intent_handler(request):
